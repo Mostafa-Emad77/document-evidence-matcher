@@ -1,0 +1,44 @@
+HOW TO RUN PARSING BOT
+
+Prerequisites:
+1. Install Python 3.11 or newer.
+2. Create a .env file in the project root.
+3. Add your OpenAI API key to .env:
+   OPENAI_API_KEY=your_key_here
+
+Run locally:
+1. Open a terminal in the project root.
+2. Create a virtual environment:
+   python -m venv .venv
+3. Activate it on Windows:
+   .venv\Scripts\activate
+4. Install dependencies:
+   pip install -r requirements.txt
+5. Start the backend:
+   uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+6. In a second terminal, start the frontend:
+   cd frontend
+   npm install
+   npm run dev
+7. Open the frontend:
+   http://localhost:5173
+8. Open the backend health check:
+   http://localhost:8000/api/health
+
+Run with Docker:
+1. Make sure Docker Desktop is installed and running.
+2. Open a terminal in the project root.
+3. Build and start the app:
+   docker compose up --build
+4. Open the frontend:
+   http://localhost:5173
+5. Open the backend health check:
+   http://localhost:8000/api/health
+6. Stop the app with Ctrl+C, then run:
+   docker compose down
+
+Main API endpoints:
+- POST   /api/parse
+- GET    /api/output/json
+- GET    /api/output/docx
+- GET    /api/health

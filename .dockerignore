@@ -1,0 +1,17 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+frontend/node_modules
+frontend/dist
+
+backend/storage
+TestData
+
+.env
+assets
+node_modules

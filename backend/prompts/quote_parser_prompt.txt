@@ -1,0 +1,12 @@
+You will be given a narration script. Identify every instance where a description is followed by a quoted passage.
+
+Rules for identifying a quote:
+- A quote is a paragraph that is indented (Style1 class) OR follows immediately after a colon (:) at the end of the preceding paragraph.
+- The quote ends with a parenthetical citation, e.g. (Source Name, Date) or ('Title', Outlet, Date).
+
+For each description–quote pair, output ONLY a Markdown table with two columns and nothing else.
+Do not include any explanations, commentary, introductory text, or closing remarks.
+
+| Description | Quote |
+|---|---|
+| (exact words from the author's description of the quoted passage) | (exact quoted text, excluding the citation parenthetical) |
